@@ -1,0 +1,32 @@
+.social {
+  grid-column: 2 span;
+  justify-content: end;
+
+  @include flex-v-center;
+
+  &__item {
+    @include mr(20px)
+  }
+
+  &__link {
+
+    &:focus svg {
+      fill: var(--brown-color);
+    }
+
+    svg {
+      width: 30px;
+      height: 30px;
+      fill: var(--light-text-color);
+      transition: fill .3s ease-in-out;
+
+      &:hover {
+        fill: var(--accent-color);
+      }
+
+      &:active {
+        fill: var(--active-color);
+      }
+    }
+  }
+}

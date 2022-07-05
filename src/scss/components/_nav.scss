@@ -1,0 +1,159 @@
+.header__nav {
+  grid-column: 7 span;
+  align-self: center;
+
+  @include tablet {
+    grid-column: 5 span;
+    max-width: 558px;
+  }
+
+  @include medium-tablet {
+    max-width: 100%;
+    display: flex;
+    position: absolute;
+    top: 64px;
+    left: 15px;
+    right: 15px;
+    z-index: 5;
+  }
+
+  @include small-tablet {
+    left: 27px;
+    right: 27px;
+  }
+
+  @include mobile {
+    height: 92vh;
+    padding: 14px 21px 38.5px 21px;
+    visibility: hidden;
+    flex-direction: column;
+    left: 0;
+    top: 52px;
+    right: 0;
+    background-color: var(--dark-text-color);
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all .3s ease-in-out;
+  }
+
+  @include small-mobile {
+    top: 43px;
+  }
+
+  &-btn {
+    display: none;
+
+    svg {
+      width: 10px;
+      height: 10px;
+      fill: var(--light-color);
+    }
+
+    @include mobile {
+      display: flex;
+      width: 18px;
+      height: 18px;
+      margin-bottom: 16px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      border: none;
+      background-color: var(--btn-close-color);
+    }
+  }
+
+  &-phon {
+    display: none;
+
+    @include mobile {
+      display: flex;
+      margin-top: auto;
+      font-family: "TTFirsNeue";
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      display: flex;
+      align-items: center;
+      color: var(--accent-color);
+
+
+      svg {
+        width: 16.5px;
+        height: 16.5px;
+        fill: var(--accent-color);
+      }
+    }
+  }
+}
+
+.nav {
+  @include medium-tablet {
+    width: 100%;
+    display: flex;
+  }
+
+  &__list {
+    @include flex-all-sb;
+
+    @include medium-tablet {
+      width: 100%;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__item:not(:last-child) {
+    @include mobile {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--light-color);
+    z-index: 1;
+    transition: color .3s ease-in-out;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -6px;
+      bottom: 0;
+      left: -6px;
+      z-index: -1;
+      background-color: var(--brown-color);
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+    }
+
+    &:focus-visible::after {
+      opacity: 1;
+    }
+
+    &:hover {
+      color: var(--accent-color);
+    }
+
+    &:active {
+      color: var(--active-color);
+    }
+  }
+}
+
+.menu--active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all .3s ease-in-out;
+}
+
+.nav__link:focus-visible::after {
+  opacity: 1;
+}

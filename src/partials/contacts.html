@@ -1,0 +1,53 @@
+<section class="contacts" id="contacts">
+  <div class="container contacts__container">
+    <h3 class="contacts__title">Контакты</h3>
+    <div class="contacts__content">
+      <div class="contacts__left">
+        <address class="contacts__adress">
+          <button class="contacts__adress-btn btn-reset">
+            <svg>
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="contacts__adress-content">
+            <h3 class="contacts__adress-title">Студия “High pass”</h3>
+            <p class="contacts__adress-text">
+              107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис № 82
+              <span class="contacts__adress-text-phon">
+                <a href="tel:+749542423532" class="contacts__adress-phon">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#phon"></use>
+                  </svg>
+                  +7 (495) 42-423-532
+                </a>
+              </span>
+            </p>
+          </div>
+        </address>
+        <div class="contacts__map" id="map"></div>
+      </div>
+      <div class="contacts__right">
+        <h3 class="contacts__right-subtitle">Оставить заявку</h3>
+        <p class="contacts__right-text">Оставьте ваши данные, указав в графе “Комментарий” желаемые время и дату съемки
+          или другого мероприятия
+        </p>
+        <form action="#" class="contacts__right-form form">
+          <label class="form__label">
+            <div class="form__input-container">
+              <input type="text" name="Имя" class="input-reset form__input contacts__right-form__input input-name"
+                placeholder="Имя">
+            </div>
+            <div class="form__input-container">
+              <input type="text" name="E-mail" class="input-reset form__input contacts__right-form__input input-mail"
+                placeholder="E-mail">
+            </div>
+            <textarea type="text" name="comment"
+              class="input-reset form__input contacts__right-form__input input-comment"
+              placeholder="Комментарий"></textarea>
+          </label>
+          <button class="contacts__right-form-btn btn-reset form__btn btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

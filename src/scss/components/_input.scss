@@ -1,0 +1,58 @@
+.form__input {
+  min-height: 50px;
+  padding: 15px 23px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  @include small-mobile {
+    min-height: 40px;
+    padding: 12px 23px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &:focus {
+    outline: 1px solid var(--accent-color);
+  }
+
+  &:hover {
+    &::placeholder {
+      color: var(--accent-color);
+      transition: color .3s ease-in-out;
+    }
+  }
+
+  &:active {
+    outline: none;
+  }
+}
+
+
+.input-comment {
+  overflow: auto;
+  resize: none;
+  min-height: 150px;
+}
+
+.form__input-container {
+  position: relative;
+}
+
+.just-validate-error-label {
+  position: absolute;
+  transform: translate(23px, -69px);
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 11px;
+  color: #FF3030 !important;
+}
+
+.just-validate-error-field {
+  border: 1px solid #FF3030 !important;
+}
+
+
+

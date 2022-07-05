@@ -1,0 +1,72 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15.5px 23px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  align-items: center;
+  background: var(--accent-color);
+  color: var(--light-color);
+  transition: outline .1s ease-in-out, background-color .1s ease-in-out;
+
+  @include mobile {
+    padding: 12px 22px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--active-color);
+  }
+
+  &:hover {
+    background-color: var(--brown-color);
+  }
+
+  &:active {
+    background-color: var(--active-color);
+  }
+}
+
+.btn-border {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12.5px 19px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  align-items: center;
+  background: transparent;
+  border: 3px solid var(--accent-color);
+  color: var(--light-color);
+  transition: background-color .1s ease-in-out;;
+
+  @include mobile {
+    padding: 12px 21px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  @include small-mobile {
+    padding: 9px 18px;
+  }
+
+  &:focus-visible {
+    background-color: var(--brown-color);
+  }
+
+  &:hover {
+    background-color: var(--accent-color);
+  }
+
+  &:active {
+    background: var(--active-color);
+    border: 3px solid var(--active-color);
+  }
+
+}

@@ -1,0 +1,157 @@
+.footer {
+
+  @include small-mobile {
+    position: relative;
+  }
+
+  &__top {
+    padding-top: 26px;
+    padding-bottom: 15px;
+    background-color: var(--dark-text-color);
+
+    @include small-mobile {
+      padding-top: 31px;
+      padding-bottom: 28px;
+    }
+  }
+
+  &__container {
+    @include grid;
+
+    @include tablet {
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    @include small-mobile {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+
+  &__content {
+    grid-column: 4 span;
+
+    @include flex;
+    flex-direction: column;
+  }
+
+  &__left {
+
+    @include tablet {
+      grid-column: 3 span;
+    }
+
+    @include medium-tablet {
+      grid-column: 6 span;
+    }
+
+    @include small-tablet {
+      grid-column: 4 span;
+    }
+
+    @include small-mobile {
+      position: absolute;
+      bottom: 14px;
+      align-items: center;
+      z-index: 5;
+    }
+
+
+    &-logo {
+      @include tablet {
+        margin-bottom: 10px;
+      }
+
+      @include small-mobile {
+        margin-bottom: 3px;
+      }
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      color: var(--input-bg2-color);
+
+      @include small-mobile {
+        font-size: 10px;
+        line-height: 13px;
+      }
+    }
+  }
+
+  &__center {
+
+    @include medium-tablet {
+      display: none;
+    }
+
+    @include tablet {
+      grid-column: 3 span;
+    }
+
+    &-descr {
+      @include p-descr;
+      line-height: 22px;
+      color: var(--light-text-color);
+    }
+
+    &-text {
+      @include p-descr;
+      line-height: 22px;
+      color: var(--btn-close-color);
+    }
+  }
+
+  &__right {
+
+    @include tablet {
+      grid-column: 2 span;
+    }
+
+    align-items: flex-end;
+
+    @include small-mobile {
+      align-items: center
+    }
+
+    &-text {
+      @include p-descr;
+      margin-bottom: 8px;
+      display: inline-block;
+      line-height: 22px;
+      color: var(--light-text-color);
+
+      @include small-mobile {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  &__social {
+    padding-right: 38px;
+
+    @include mobile {
+      padding-right: 26px;
+    }
+
+    @include small-mobile {
+      padding-right: 0;
+    }
+  }
+
+  &__bottom {
+    &-container {
+      @include small-mobile {
+        min-height: 62px;
+        background-color: var(--nav-bg-color);
+      }
+    }
+  }
+}

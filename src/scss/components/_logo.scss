@@ -1,0 +1,16 @@
+.logo {
+
+  // &:focus-visible {
+  //   outline: 1px solid var(--accent-color);
+  // }
+
+  @include tablet {
+    width: 166px;
+    height: 27px;
+  }
+
+  @include small-mobile {
+    width: 112px;
+    height: 18px;
+  }
+}

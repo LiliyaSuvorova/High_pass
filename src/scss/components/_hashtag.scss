@@ -1,0 +1,26 @@
+.hashtag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 15px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--light-color);
+  background: var(--hashtag-color);
+
+  @include mobile {
+    padding: 4px 7px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  @include small-mobile {
+    top: 6px;
+    right: 6px;
+  }
+}
